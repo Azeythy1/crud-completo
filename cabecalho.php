@@ -8,7 +8,7 @@
         <li id="inicio" style="--i:rgba(68, 66, 66, 0.836);--j:rgb(255, 255, 255);">
             
             <span class="icone"><ion-icon name="home"></ion-icon></span>
-            <a id="idx" href="home.php" class="title">HOME</a>
+            <a id="idx" href="index.php" class="title">HOME</a>
         </li> 
        
         <li id="jogos" style="--i:rgba(68, 66, 66, 0.836);--j:rgb(255, 255, 255);">
