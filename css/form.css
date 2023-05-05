@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box ;
+   font-family:'poppins',sans-serif ;
+}
+main{
+    display: flex;
+    z-index: 1000;
+    width: 90%;
+    height: 100vh;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(25px);
+
+    
+   
+}
+main:focus{
+    display: flex;
+    z-index: 1000;
+    width: 90%;
+    height: 100vh;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(25px);
+   
+  
+   
+}
+.rotary{
+    transition: all 890ms ease;
+    transform: rotatey(180deg);
+    backface-visibility: hidden;
+}
+
+.face{
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    gap: 35;
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+    /* backface-visibility: hidden; */
+    
+    background: linear-gradient(rgba(51, 50, 48, 0.836),rgb(33, 110, 155));
+}
+/* .face .front{
+    backface-visibility: hidden;
+    position: relative;
+    transform: rotateY(180deg);
+    justify-content: center;
+} */
+.face .back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    position: relative;
+    z-index: 1000;
+    width: max-content;
+    max-width: max-content;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+    height: 100vh;
+
+}
+/* .container::before{
+    content: '';
+    position: relative;
+    top:0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 133, 133, 0);
+    pointer-events: none;
+    transform: skewX(-15deg);
+    
+} */
+.container h2{
+    width: 100%;
+    text-align: center;
+    color: rgba(245, 240, 243, 0.904);
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+
+    
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+ 
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+.container .row100 .col .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: rgb(255, 255, 255);    
+}   
+.container .row100 .col .inputbox input,
+.container .row100 .col .inputbox textarea{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding:  0 10px;
+    z-index: 1;
+    color: black;
+}
+.container .row100 .col .inputbox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .col .inputbox input:focus ~ .text,
+.container .row100 .col .inputbox input:valid ~ .text
+.container .row100 .col .inputbox textarea:focus ~ .text,
+.container .row100 .col .inputbox textarea:valid ~ .text{
+    top: -35px;
+    left: -10px;
+
+}
+.container .row100 .col .inputbox  .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(231, 226, 226);
+    transition: 0.5s;
+    border-radius: 2px;
+   
+}
+.container .row100 .col .inputbox input:focus ~ .line,
+.container .row100 .col .inputbox input:valid ~ .line{
+    height: 100%;
+}
+.container .row100 .col .inputbox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.container .row100 .col .inputbox textarea:focus ~ .line,
+.container .row100 .col .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+.container .row100 .col input[type="submit"]{
+  
+    padding: 10px 40px;
+    cursor: pointer;
+    box-shadow: 0 0 0  1px rgba(31, 34, 34, 0.712);
+    background: rgb(219, 57, 57);
+    color: rgb(34, 90, 117);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 4px;
+    
+
+}
+
+button{
+    margin-top: 20px;
+    font-size: large;
+    font-weight: 700;
+    width: 100%;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+    background:transparent ;
+    color:#fff;
+    cursor: pointer;
+}
